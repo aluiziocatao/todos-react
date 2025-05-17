@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import AddTask from "./Components/AddTask"
 import Tasks from "./Components/Tasks"
 import { v4 } from "uuid";
 import Title from "./components/Title";
+import AddTask from "./Components/AddTask";
 
 function App() {
   const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) || []);
