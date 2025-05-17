@@ -16,8 +16,8 @@ function Tasks({tasks, onTaskClick, onDeleteTaskClick}) {
             {tasks.map((task) => (
                 <li key={task.id} className="flex gap-2">
                     <button onClick={() => onTaskClick(task.id)} 
-                            className={`bg-slate-400 text-white text-left p-2 rounded-md w-full ${task.isCompleted ? "line-through" : ""}`}>
-                        {task.isCompleted ? "✅ " : "❌ "}
+                            className={`bg-slate-400 text-white text-left p-2 rounded-md w-full ${task.isCompleted && "line-through"}`}>
+                        {task.isCompleted && "✅ "}
                         {task.title}
                     </button>
                     <Button onClick={() => onSeeDetailsClick(task)}><ChevronRightIcon /></Button>
